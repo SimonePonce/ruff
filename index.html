@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffe0ec 0%, #fff0f5 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #fff5fa 0%, #ffe0ec 100%);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(255, 105, 180, 0.3);
+            text-align: center;
+            max-width: 400px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            color: #ff1493;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #d946a6;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+        }
+
+        .btn-yes {
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            color: white;
+        }
+
+        .btn-yes:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
+        }
+
+        .btn-no {
+            background: #ffc0cb;
+            color: #d946a6;
+        }
+
+        .btn-no:hover {
+            background: #ffb3c1;
+            transform: scale(1.05);
+        }
+
+        .hearts {
+            font-size: 2em;
+            margin-top: 20px;
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>anyongg!</h1>
+        <p>You make my heart skip a beat! Will you be my Valentine?</p>
+        <div class="button-group">
+           <a href="next.html"><button class="btn-yes" onclick="handleYes()">Yes</button></a>
+            <button class="btn-no" onclick="handleNo()">Sige</button>
+        </div>
+        <div class="hearts">💗</div>
+    </div>
+
+    <script>
+        function handleYes() {
+            alert('SUS DAPAT RA GYUD!!');
+        }
+
+        function handleNo() {
+            alert('DAPAT LANGGG!!');
+        }
+    </script>
+</body>
+</html>
